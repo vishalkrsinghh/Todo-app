@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Application</title>
+
+    <style>
+        #textArea {
+            max-height: 50px;
+            display: block;
+            width: 100%;
+        }
+
+        #sel {
+            display: block;
+            width: 100%;
+            height: 4vh;
+        }
+
+        #date {
+            display: block;
+            width: 100%;
+            height: 3.3vh;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            min-width: 55vw;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .dv1 {
+            width: 41%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .submitBtn {
+            width: fit-content;
+        }
+
+        .flexx {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .catBtn {
+            width: 75px;
+        }
+
+        .overflow {
+            overflow: scroll;
+        }
+
+        main {
+            overflow: scroll;
+            height: 55vh;
+        }
+
+        .overflow::-webkit-scrollbar,
+        main::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>TODO App</h1>
+    <div class="main">
+        <form action="/save" method="post">
+            <textarea name="discription" id="textArea" cols="30" rows="3" placeholder="DISCRIPTION" required></textarea>
+            <div class="flex">
+                <div class="dv1">
+                    CATEGORY
+                    <select name="select" id="sel">
+                        <option value="select">Select</option>
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="study">Study</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="dv1">
+                    DUE DATE
+
+                    <input type="date" name="date" id="date" required>
+                </div>
+            </div>
+            <!-- <input type="submit" value="ADD TASK"> -->
+            <button type="submit" value="ADD TASK" class="submitBtn">ADD TASK</button>
+        </form>
+    </div>
+
+    <main>
+        <% for(let i=0; i<dta.length; i++){ %>
+            <div class="flexx">
+                <input type="checkbox" name="" id="" value="<%=dta[i]._id %>">
+                <div class="overflow">
+                    <p>
+                        <%=dta[i].discription%>
+                    </p>
+                    <p>
+
+                        <%=mnth[new Date(dta[i].date).getMonth()] %>
+                            <%=new Date(dta[i].date).getDate() %>, <%=new Date(dta[i].date).getFullYear() %>
+                    </p>
+                </div>
+                <button class="catBtn">
+                    <%=dta[i].select%>
+                </button>
+            </div>
+            <%}%>
+    </main>
+</body>
+
+</html>
