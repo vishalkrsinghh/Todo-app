@@ -1,0 +1,90 @@
+#textArea,
+#textArea2 {
+    max-height: 50px;
+    min-height: 50px;
+    display: block;
+    max-width: 95vw;
+    min-width: 40vw;
+}
+
+#sel {
+    display: block;
+    width: 100%;
+    height: 4vh;
+}
+
+#date,#date2 {
+    display: block;
+    width: 100%;
+    height: 3.3vh;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* min-width: 55vw; */
+    align-items: center;
+    gap: 25px;
+}
+
+.dv1 {
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+#main2 {
+    display: none;
+}
+
+.submitBtn {
+    width: fit-content;
+}
+
+.flexx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catBtn {
+    width: 75px;
+}
+
+.overflow {
+    overflow: scroll;
+}
+
+main {
+    overflow: scroll;
+    height: 55vh;
+}
+
+.overflow::-webkit-scrollbar,
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.sm {
+    border: 1px solid black;
+    padding: 2px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+#edit {
+    pointer-events: none;
+}
