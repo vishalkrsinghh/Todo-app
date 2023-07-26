@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo Application</title>
     
+    <!-- favicon dena hai -->
+
     <link rel="stylesheet" href="./css/homeStyle.css">
     <script src="./js/homejs.js" defer></script>
 
@@ -14,7 +16,7 @@
 
 <body>
 
-    <h1>TODO App</h1>
+    <h3>TODO App</h3>
     <div class="main">
         <form action="/save" method="post">
             <textarea name="discription" id="textArea" cols="30" rows="3" placeholder="DISCRIPTION" required></textarea>
@@ -72,6 +74,7 @@
         </form>
     </div>
 
+    <h4>Tasks</h4>
     <main>
         <% for(let i=0; i<dta.length; i++){ %>
             <div class="flexx">

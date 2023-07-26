@@ -11,6 +11,7 @@ let main2 = document.getElementById("main2");
 let main = document.getElementsByClassName("main")[0];
 let main3 = document.getElementsByTagName("main")[0]
 let checkBox = document.getElementsByClassName("checkBox");
+let catBtn = document.getElementsByClassName("catBtn");
 
 for (let i = 0; i < checkBox.length; i++) {
     checkBox[i].onclick = () => {
@@ -44,5 +45,16 @@ let show = () => {
     }
     date2.value=`${year}-${month}-${dt}`;
     // console.log(date2.value);
+}
+for(let i=0; i<catBtn.length; i++){
+    if(catBtn[i].innerText==="Personal"){
+        catBtn[i].style.background="#8585ff"
+    }
+     if(catBtn[i].innerText==="Work"){
+        catBtn[i].style.background="#82ff82"
+    }
+     if(catBtn[i].innerText==="Study"){
+        catBtn[i].style.background="#ff75ff"
+    }
 }
 edit.addEventListener("click", show);
