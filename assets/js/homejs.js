@@ -9,13 +9,14 @@ let para1 = document.getElementsByClassName("para1");
 let para2 = document.getElementsByClassName("para2");
 let main2 = document.getElementById("main2");
 let main = document.getElementsByClassName("main")[0];
-let main3 = document.getElementsByTagName("main")[0]
+let main3 = document.getElementsByTagName("main")[0];
+let h4 = document.getElementsByTagName("h4")[0];
 let checkBox = document.getElementsByClassName("checkBox");
 let catBtn = document.getElementsByClassName("catBtn");
 
 for (let i = 0; i < checkBox.length; i++) {
     checkBox[i].onclick = () => {
-        console.log(checkBox[i].value);
+        // console.log(checkBox[i].value);
         del.setAttribute("href", `/delete/${checkBox[i].value}`);
         form2.setAttribute("action", `/update/${checkBox[i].value}`);
         textArea1 = para1[i].innerText;
@@ -32,8 +33,8 @@ let show = () => {
     main2.style.justifyContent="center";
     main.style.display = "none";
     main3.style.display = "none"
+    h4.style.display = "none"
     textArea2.value = textArea1;
-    let newDate= new Date(date);
     let month=new Date(date).getMonth()+1;
     let year=new Date(date).getFullYear()
     let dt=new Date(date).getDate()

@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo Application</title>
-    
-    <!-- favicon dena hai -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Baloo+Bhai+2&family=Comic+Neue:wght@700&family=DotGothic16&family=Lobster+Two:ital@1&family=Poppins:wght@300&family=Roboto+Mono&family=Zen+Dots&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a85cd81b06.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./image/noteFav.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/homeStyle.css">
     <script src="./js/homejs.js" defer></script>
-
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             <textarea name="discription" id="textArea" cols="30" rows="3" placeholder="DISCRIPTION" required></textarea>
             <div class="flex">
                 <div class="dv1">
-                    CATEGORY
+                    Category
                     <select name="select" id="sel">
                         <option value="select">Select</option>
                         <option value="personal">Personal</option>
@@ -32,16 +33,16 @@
                     </select>
                 </div>
                 <div class="dv1">
-                    DUE DATE
+                    Due Date
 
                     <input type="date" name="date" id="date" required>
                 </div>
             </div>
             <!-- <input type="submit" value="ADD TASK"> -->
             <div class="flex">
-                <button type="submit" value="ADD TASK" class="submitBtn">ADD TASK</button>
-                <a id="edit" class="sm"> Edit </a>
-                <a id="del" class="sm"> Delete </a>
+                <button type="submit" value="ADD TASK" class="submitBtn"><i class="fa-solid fa-plus fa-sm"></i>Add task</button>
+                <a id="edit" class="sm"><i class="fa-solid fa-pencil fa-xs"></i> Edit </a>
+                <a id="del" class="sm"><i class="fa-regular fa-trash-can fa-xs"></i> Delete </a>
             </div>
         </form>
     </div>
@@ -67,7 +68,6 @@
                     <input type="date" name="date" id="date2" required>
                 </div>
             </div>
-            <!-- <input type="submit" value="ADD TASK"> -->
             <div class="flex">
                 <button type="submit" value="update" class="submitBtn">UPDATE</button>
             </div>
