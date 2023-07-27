@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// creating a bluePrint or schema of the documents
 let todoSchema = mongoose.Schema({
 
     discription: {
@@ -20,5 +20,7 @@ let todoSchema = mongoose.Schema({
     // }
 })
 
+// creating a collection in MongoDb.
 const todoCollection = mongoose.model("todoCollection", todoSchema)
+// exporting that collection.
 module.exports = todoCollection;

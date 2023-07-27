@@ -1,3 +1,4 @@
+// declare all the variables.
 let del = document.getElementById("del");
 let edit = document.getElementById("edit");
 let form2 = document.getElementById("form2");
@@ -14,6 +15,7 @@ let h4 = document.getElementsByTagName("h4")[0];
 let checkBox = document.getElementsByClassName("checkBox");
 let catBtn = document.getElementsByClassName("catBtn");
 
+// what will happens after clicking on radio button. 
 for (let i = 0; i < checkBox.length; i++) {
     checkBox[i].onclick = () => {
         // console.log(checkBox[i].value);
@@ -28,6 +30,8 @@ for (let i = 0; i < checkBox.length; i++) {
     }
 
 }
+
+// on click edit button what will happens
 let show = () => {
     main2.style.display = "flex";
     main2.style.justifyContent="center";
@@ -47,6 +51,8 @@ let show = () => {
     date2.value=`${year}-${month}-${dt}`;
     // console.log(date2.value);
 }
+
+// changes the color of Category buttons according to innertext
 for(let i=0; i<catBtn.length; i++){
     if(catBtn[i].innerText==="Personal"){
         catBtn[i].style.background="#8585ff"
@@ -58,4 +64,5 @@ for(let i=0; i<catBtn.length; i++){
         catBtn[i].style.background="#ff75ff"
     }
 }
+// adding event to edit button
 edit.addEventListener("click", show);

@@ -18,6 +18,8 @@
 <body>
 
     <h3>TODO App</h3>
+
+    <!-- div of adding tasks. -->
     <div class="main">
         <form action="/save" method="post">
             <textarea name="discription" id="textArea" cols="30" rows="3" placeholder="DISCRIPTION" required></textarea>
@@ -47,6 +49,7 @@
         </form>
     </div>
 
+    <!-- div of updating/editing task.  -->
     <div id="main2">
         <form method="post" id="form2">
             <textarea name="discription" id="textArea2" cols="30" rows="3" placeholder="DISCRIPTION"
@@ -74,8 +77,10 @@
         </form>
     </div>
 
+     <!-- all the tasks will show here with the help of ejs -->
     <h4>Tasks</h4>
     <main>
+        <!-- below for loop is for showing all the documents data to the frontend side which is render by homeController.js or backend -->
         <% for(let i=0; i<dta.length; i++){ %>
             <div class="flexx">
                 <input type="radio" name="radio" class="checkBox" value="<%=dta[i]._id %>">
